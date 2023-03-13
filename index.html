@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grupo LERI</title>
+</head>
+
+<link rel = "stylesheet" href="bootstrap.css">
+
+
+<style>
+        .h1{
+            color: blue;
+
+
+        }
+        .navbar
+        {
+            transition: top 0.5s; /* Transition effect when sliding down (and up) */
+            position: fixed; /* Make it stick/fixed */
+            top: 0; /* Stay on top */
+        }
+        .nav-link{
+            color:white;
+        }
+        .nav-link:hover {
+            color: #4bccf9;
+        }
+        .nav-link:checked {
+            color: pink;
+        }
+
+        .cuadro{
+            width: 70%;
+            margin-top: 35px;
+            color:blue;
+        }
+        .img-text-container {
+            position: relative;
+        }
+
+        .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            padding: 30px;
+        }
+        .li1{
+            margin-top: 8px;
+        }
+        li::marker {
+            color: #ff6600;
+            font-size: 60px;
+        }
+        li span {
+            position: relative;
+            left: -20px;
+            top: -8px;
+        }
+        .card1{
+            background: url("assets/cuadro1-naranja.png") no-repeat;
+        }
+        .image_container{
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+</style>
+
+
+
+
+    <div class="container-fluid m-0 p-0 ">
+        <nav class="navbar navbar-expand-md fixed-top opacity-75 navbar-hide-on-scroll" id="navbar" style="background-color: #21212A;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logos-nav.png" alt="" width="120" height="30">
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#nosotros">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios"  >SERVICIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alcance"  >ALCANCE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto"  >CONTACTO</a>
+                    </li>
+                </ul>
+                <form>
+                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </form>
+              </div>
+            </div>
+          </nav>
+
+        <div class = "d-flex justify-content-center gy-0 ">
+            <img class="img-fluid"  src="assets/header-frase-esp.png"/>
+        </div>
+    </div>
+
+    <div class="container mt-0">
+        <!--NOSOTROS-->
+        <div class="row mt-3" id="nosotros">
+            <div class="col-12" >
+                <img class="img-fluid " src="./assets/nosotros.png">
+            </div>
+        </div>
+
+
+        <div class="row mt-4 ">
+            <div class="col-12">
+                <h1 class="display-6 text-center" style = "width : 80%; margin: auto;">En <b>GRUPO LERI</b> nos comprometemos a ofrecer 
+                    servicios de calidad para potencializar el crecimiento 
+                    y desarrollo empresarial de nuestros clientes.</h1>
+            </div>
+        </div>
+
+        <!--SOMOS-->
+        <div class="row" style = "margin-top: 20px;">
+            <div class="col-md-4 mt-3">
+                <img class="img-fluid" src="assets/img1.png"/>
+            </div>
+            <div class="col-md-4 mt-3">
+                <img class="img-fluid" src="assets/img2.png"/>
+            </div>
+            <div class="col-md-4 mt-3">
+                <img class="img-fluid"  src="assets/imagen3-2.png"/>
+            </div>
+        </div>
+    </div>
+
+        <!--HACEMOS REAlIDAD-->
+        <div class="container-fluid p-0">
+            <div class="row g-0" style="padding-top: 10px;">
+                <div class="col-md-8" style=" padding-left: 0%;">
+                    <p class="h1" style=" margin-top: 50px;; font-size: 4.5rem; padding-left: 10%;">HACEMOS REALIDAD LOS NEGOCIOS
+                    </p>
+                    <ol  style="list-style-image: url(assets/bolita3.png); padding-left: 15%;">
+                        <li class="display-5" >Somos una empresa que cree en los 
+                            proyectos de nuestros clientes desde el 
+                            principio.</li>
+                    </ol>
+                    
+                </div>
+                <div class="col-md-4" >
+                    <img class="img-fluid"  src="assets/mundo3.png"/>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="container mt-0">
+
+
+        <!--NUESTROS SERVICIOS-->
+        <div class="row " id="servicios">
+            <div class="col-12 mt-3">
+                <img class="img-fluid" src="assets/servicios.png">
+            </div>
+        </div>
+        <div class="row align-items-center " style="margin-top: 40px;">
+            <div class="col-md-5 d-flex d-none d-sm-block ">
+                <img class="img-fluid" width="80%" src="assets/icono-grande.png" style="padding-left: 20%;">
+            </div>
+            <div class="col-md-7">
+                <div class="row gy-0 " >
+                    <p class="h1 pl-5" style=" font-weight: 700;">Más de 30 años nos respaldan
+                    </p>
+               </div>
+                <div class="row gy-0" >
+                    <p class="display-6" style="color:blue">Diseñamos estrategias óptimas para el 
+                        envío de su mercancía vía terrestre, marítima y aérea.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!--CUADRITOS-->
+        <div class="row g-0 " >
+            <div class="col-4">
+                <div class="row d-flex justify-content-end">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-1.png" class="card-img" id="1" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-4.png" class="card-img" id="4" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-end">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-7.png" class="card-img" id="7" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-2.png" class="card-img" id="2" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center ">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-5.png" class="card-img" id="5" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-8.png" class="card-img" id="8" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="row d-flex justify-content-start">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-3.png" class="card-img" id="3" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-6.png" class="card-img" id="6" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="card text-black border-0 cuadro" >
+                        <img src="assets/cuadro-texto-9.png" class="card-img" id="9" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--ALMACENAJE-->
+        <div class = "d-flex justify-content-center gy-0 image_container mt-5" style="margin-top: 0px; width: 100%;">
+            <img class="img-fluid" style="width: 100%;" src="assets/bodega-recortada2.png"/>
+            <div class="centered">
+                <p class="display-1 centered" style="line-height: 20%; font-weight: 900; color: white; font-size: 8.5rem;">
+                    <span class="value" akhi="20000">0</span><span style="font-size: 20%;">sqft</span>
+                </p>
+            </div> 
+        </div>
+
+        <!--CONTAMOS CON...-->
+        <div class="row " style="margin-top: 40px;">
+            <div class="col-md-6 " >
+                <p class="display-3" style=" font-weight: 700; color: black;">CONTAMOS <BR> CON <BR> SERVICIOS <BR> 
+                ESPECIALIZADOS <BR> COMO: <BR></p> 
+            </div>
+            <div class="col-md-6">
+                <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle">
+                    <li class=""><span>Etiquetado de mercancía</span></li>
+                    <li class="li1"><span>Manejo de carga especializada y sobre dimensionada</span></li>
+                    <li class="li1"><span>Consolidación</span></li>
+                    <li class="li1"><span>Operación de hand carriers y charters</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--ALCANCE-->
+        <div class="row mt-5" id = "alcance" >
+            <div class="col-12">
+                <img class="img-fluid" src="assets/alcance.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" style="margin-top: 40px;">
+                <img class="img-fluid" src="assets/mapa.png">
+            </div>
+        </div>
+        <div class="row border-bottom mb-5">
+            <div class="col-12">
+                <p class="display-3" style=" font-weight: 700; color: blue; text-align: center;">PRESENCIA EN MÉXICO
+                    <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
+                </p>
+            </div>
+        </div>
+
+
+        <!--ADUANAS-->
+        <div class="row g-0 " style="margin-top: 10px;">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p class="display-3 text-center" style=" font-weight: 700; color: black;">ADUANAS 
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row d-block d-sm-none">
+            <div class="col-12  ">
+                <img class="img-fluid float-right" src="assets/aduana1.png">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <p class="display-6" style="color:black">Diseñamos estrategias óptimas para el 
+                    envío de su mercancía vía terrestre, marítima y aérea.envío de su mercancía vía terrestre.
+                </p>
+                <ul class="display-6" style="margin-left:20px; font-weight: 350; font-weight: 400">
+                    <li class=""><span>Nuevo Laredo, Tamaulipas</span></li>
+                    <li class="li1"><span>Colombia, Nuevo Leon</span></li>
+                    <li class="li1"><span>Manzanillo, Colima</span></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid d-none d-sm-block" src="assets/aduana1.png">
+            </div>
+        </div>
+
+    </div>    
+
+
+
+
+    <div class="container" style="margin-top: 0px;">
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-4"></div>
+            <div class="col-md-12">
+                <p class="display-2 text-center" style="color:blue;font-weight: 700;">Trabajamos con todo  
+                    tipo de industrias.
+                </p>
+            </div>
+        </div>
+
+        <!--ICONOS-->
+        <div class="row"></div>
+
+        <div class="row" style="margin-top: 70px;">
+            <div class="col-12" class="bg-primary">
+                <img class="img-fluid" src="assets/collage.png" class="bg-primary">
+            </div>
+            <div class="col-12">
+                <p class="display-6 text-center" style="color:black"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
+                     Trabajamos con todo tipo de industrias, desde artículos para bebé, automotriz,
+                      maquinaria militar, mercancía HAZ-MAT, entre otras.<br><br> El personal de <b>GRUPO LERI</b> esta capacitado 
+                      para ofrecer un servicio personalizado según las necesidades de su empresa.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-1">
+                <img class="img-fluid" src="assets/mundito.png" style="margin-top: 10PX;">
+            </div>
+            <div class="col-11">
+                <p class="display-6" style="color:black; font-size: 30px; font-weight: 700;">Nuestra experiencia le<BR>
+                    garantiza su tranquilidad.
+                </p>
+            </div>
+        </div>
+
+        <!--CONTACTANOS-->
+        <div class="row" style="margin-top: 40px;" id="contacto">
+            <div class="col-12">
+                <img class="img-fluid" src="assets/contacto.png">
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
+            <div class="col-12 d-flex justify-content-center">
+                <p class="display-6 d-none d-sm-block" style=" color:blue; font-size: 40px; font-weight: 700; width: 70%; text-align: center;">Contáctanos para conocer sobre tu proyecto,
+                    estamos listos para crecer juntos.
+                </p>
+                <p class="display-6 d-block d-sm-none" style=" color:blue; font-weight: 700; text-align: center;">Contáctanos para conocer sobre tu proyecto,
+                    estamos listos para crecer juntos.
+                </p>
+            </div>
+        </div>
+
+        <!--FORM-->
+        <div class="row align-items-center" style="margin-top: 0px;">
+            <div class="col-5">
+                <img class="img-fluid d-none d-sm-block" src="assets/icono-azul2.png">
+            </div>
+            <form class="col-md-7">
+                <div class="mb-3">
+                    <label for="name" class="form-label">NOMBRE</label>
+                    <input type="text" class="form-control rounded-pill" id="full-name" style="border-width: medium;">    
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="message" class="form-label">EMAIL</label>
+                        <input type="email" class="form-control rounded-pill" id="email" style="border-width: medium;"> 
+                    </div>
+                    <div class="col-6">
+                        <label for="message" class="form-label">TELÉFONO</label>
+                        <input type="tel" class="form-control rounded-pill" id="phone-number" style="border-width: medium;"> 
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="form-label">MENSAJE</label>
+                    <textarea class="form-control" id="message1" rows="5" style="border-radius: 25px;border-width: medium;"></textarea>    
+                </div>  
+                <div class="d-flex justify-content-center mb-3">
+                    <button type="submit" class="btn btn-primary rounded-pill btn-lg ">ENVIAR</button>
+                </div>  
+            </form>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <div class="container ">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted">NOSOTROS</a></li>
+            <li class="nav-item"><a href="#servicios" class="nav-link px-2 text-muted">SERVICIOS</a></li>
+            <li class="nav-item"><a href="#alcance" class="nav-link px-2 text-muted">ALCANCE</a></li>
+            <li class="nav-item"><a href="#contacto" class="nav-link px-2 text-muted">CONTACTANOS</a></li>
+          </ul>
+          <p class="text-center text-muted">© 2023 Grupo LERI, Inc</p>
+        </footer>
+    </div>
+
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" async defer></script>
+
+  
+    <!--TO HIDE NAVBAR WHEN SCROLLING-->
+    <script>var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-60px";
+        }
+        prevScrollpos = currentScrollPos;}
+    </script>
+
+    <!--change image when hovering-->
+    <script>
+        function hover2(img){
+            img.src = "assets/cuadro-naranja-" + img.id + ".png"
+        }
+    </script>
+
+    <!--return image when hover out-->
+    <script>
+        function hoverOut(img){
+            img.src = "assets/cuadro-texto-" + img.id + ".png"
+        }
+    </script>
+
+    <!--counter animation-->
+    <script>
+        const counters = document.querySelectorAll('.value');
+        const speed = 303;
+
+        counters.forEach( counter => {
+        const animate = () => {
+            const value = +counter.getAttribute('akhi');
+            const data = +counter.innerText;
+            
+            const time = value / speed;
+            if(data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 1);
+                }else{
+                counter.innerText = value;
+                }
+            
+        }
+   
+        animate();
+        });
+    </script>
+    
+</body>
+</html>
