@@ -96,7 +96,7 @@
               <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#nosotros">NOSOTROS</a>
+                        <a class="nav-link " href="#nosotros">NOSOTROS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#servicios"  >SERVICIOS</a>
@@ -120,7 +120,7 @@
         </div>
     </div>
 
-    <div class="container mt-0">
+    <div class="container-fluid mt-0">
         <!--NOSOTROS-->
         <div class="row mt-3" id="nosotros">
             <div class="col-12" >
@@ -152,12 +152,12 @@
     </div>
 
         <!--HACEMOS REAlIDAD-->
-        <div class="container-fluid p-0">
+        <div class="container-fluid ">
             <div class="row g-0" style="padding-top: 10px;">
                 <div class="col-md-8" style=" padding-left: 0%;">
-                    <p class="h1" style=" margin-top: 50px;; font-size: 4.5rem; padding-left: 10%;">HACEMOS REALIDAD LOS NEGOCIOS
+                    <p class="h1" style=" margin-top: 50px;; font-size: 4.5rem;">HACEMOS REALIDAD LOS NEGOCIOS
                     </p>
-                    <ol  style="list-style-image: url(assets/bolita3.png); padding-left: 15%;">
+                    <ol  style="list-style-image: url(assets/bolita3.png);">
                         <li class="display-5" >Somos una empresa que cree en los 
                             proyectos de nuestros clientes desde el 
                             principio.</li>
@@ -436,8 +436,36 @@
         </footer>
     </div>
 
+    <body>
+        <form method="post">
+          <input type="button" value="Send Email" 
+              onclick="sendEmail()" />
+        </form>
+    </body>
+
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" async defer></script>
+
+    <script src=
+        "https://smtpjs.com/v3/smtp.js">
+    </script>
+    
+    <script type="text/javascript">
+        function sendEmail() {
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "leri.forwarding@gmail.com",
+            Password: "Grupoleri12",
+            To: 'leri.forwarding@gmail.com',
+            From: "leri.forwarding@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+        })
+            .then(function (message) {
+            alert("mail sent successfully")
+            });
+        }
+    </script>   
 
   
     <!--TO HIDE NAVBAR WHEN SCROLLING-->
