@@ -75,7 +75,7 @@
     <nav class="navbar navbar-expand-lg navbar-hide-on-scroll border-bottom border-white" id="navbar" style="background-color:#000020;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/logos-nav.png" alt="" width="120" height="30">
+                <img src="assets/logos-nav.png" alt="" width="120" height="30" onmouseover="hover_logo(this);" onmouseout="hoverOut_logo(this)">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -178,7 +178,7 @@
         <!--NUESTROS SERVICIOS-->
         <div class="row " id="servicios">
             <div class="col-12 mt-3">
-                <img class="img-fluid" src="assets/servicios.png">
+                <img class="img-fluid" src="assets/servicios.png" style="padding-left:5%; padding-right:5%;">
             </div>
         </div>
         <div class="row align-items-center " style="margin-top: 40px;">
@@ -287,7 +287,7 @@
         <!--ALCANCE-->
         <div class="row mt-5" id = "alcance" >
             <div class="col-12">
-                <img class="img-fluid" src="assets/alcance.png">
+                <img class="img-fluid" src="assets/alcance.png" style="padding-left:5%; padding-right:5%;">
             </div>
         </div>
         <div class="row">
@@ -295,9 +295,9 @@
                 <img class="img-fluid" src="assets/mapa.png">
             </div>
         </div>
-        <div class="row border-bottom mb-5">
+        <div class="row mb-5 " style=" bottom: 50%;">
             <div class="col-12">
-                <p class="display-3" style=" font-weight: 700; color: blue; text-align: center;">PRESENCIA EN MÉXICO
+                <p class="display-3 border-bottom" style=" font-weight: 700; color: blue; text-align: center;">PRESENCIA EN MÉXICO
                     <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
                 </p>
             </div>
@@ -340,23 +340,23 @@
 
         <div class="row p-0">
             <div class="col-12">
-                <p class="display-6 text-center" style="color:white;background-color:#2f4d9b; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
+                <p class="display-6 text-center" style="color:white;background-color:#063e6a; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
                      <b>Trabajamos con todo tipo de industrias,<br></b> desde artículos para bebé, automotriz,
                       maquinaria, mercancía HAZ-MAT, entre otras.<br><br> El personal de <b>GRUPO LERI</b> esta capacitado 
                       para ofrecer un servicio personalizado según las necesidades de su empresa.
                 </p>
             </div>
             <div class="col-12">
-                <img class="img-fluid pb-5" src="assets/collage.png" style=" background-color:#2f4d9b; margin-top: -17px;">
+                <img class="img-fluid pb-5" src="assets/collage.png" style=" background-color:#063e6a; margin-top: -17px;">
             </div>
             
 
         </div>
 
         <!--CONTACTANOS-->
-        <div class="row" style="margin-top: 40px;" id="contacto">
+        <div class="row" style="margin-top: 40px;" id="contacto" >
             <div class="col-12">
-                <img class="img-fluid" src="assets/contacto.png">
+                <img class="img-fluid" src="assets/contacto.png" style="padding-left:5%; padding-right:5%;">
             </div>
         </div>
 
@@ -372,7 +372,7 @@
         </div>
 
         <!--FORM-->
-        <div class="row align-items-center" style="margin-top: 0px; padding-left: 3.5%; padding-right: 3.5%;">
+        <div class="row align-items-center" style="margin-top: 0px; padding-right: 7%;">
             <div class="col-5">
                 <img class="img-fluid d-none d-sm-block" src="assets/icono-azul2.png">
             </div>
@@ -440,6 +440,20 @@
             img.src = "assets/cuadro-texto-" + img.id + ".png"
         }
     </script>
+
+    <script>
+        function hover_logo(img){
+            img.src = "assets/logos-azul.png"
+        }
+    </script>
+
+    <!--return image when hover out-->
+    <script>
+        function hoverOut_logo(img){
+            img.src = "assets/logos-nav.png"
+        }
+    </script>
+
 
     <!--counter animation-->
     <script>
