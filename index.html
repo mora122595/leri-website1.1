@@ -9,6 +9,7 @@
 </head>
 
 <link rel = "stylesheet" href="bootstrap.css">
+<link rel = "stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
 
 <style>
@@ -16,12 +17,6 @@
             color: blue;
 
 
-        }
-        .navbar
-        {
-            transition: top 0.5s; /* Transition effect when sliding down (and up) */
-            position: fixed; /* Make it stick/fixed */
-            top: 0; /* Stay on top */
         }
         .nav-link{
             color:white;
@@ -58,11 +53,6 @@
             color: #ff6600;
             font-size: 60px;
         }
-        li span {
-            position: relative;
-            left: -20px;
-            top: -8px;
-        }
         .card1{
             background: url("assets/cuadro1-naranja.png") no-repeat;
         }
@@ -81,18 +71,17 @@
 </style>
 
 <body>
-    <div class="container-fluid m-0 p-0 ">
-        <nav class="navbar navbar-expand-md fixed-top opacity-75 navbar-hide-on-scroll" id="navbar" style="background-color: #21212A;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/logos-nav.png" alt="" width="120" height="30">
-                </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <nav class="navbar navbar-expand-lg opacity-75 navbar-hide-on-scroll" id="navbar" style="background-color: #21212A;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logos-nav.png" alt="" width="120" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-        
-              <div class="collapse navbar-collapse" id="navbarsExample04">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link " href="#nosotros">NOSOTROS</a>
                     </li>
@@ -106,17 +95,33 @@
                         <a class="nav-link" href="#contacto"  >CONTACTO</a>
                     </li>
                 </ul>
-                <form>
-                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                </form>
-              </div>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Span class="person"></Span>
+                            LOGIN
+                        </a>
+                      <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
             </div>
-          </nav>
-
+        </div>
+      </nav>
+    
+    <div class="container-fluid p-0"> 
         <div class = "d-flex justify-content-center gy-0 ">
             <img class="img-fluid"  src="assets/header-frase-esp.png"/>
         </div>
     </div>
+      
+
+
+        <!--HEADER FRASE ESPA-->
 
     <div class=" shadow container p-0">
         <!--NOSOTROS-->
@@ -322,6 +327,7 @@
                     <li class=""><span>Nuevo Laredo, Tamaulipas</span></li>
                     <li class="li1"><span>Colombia, Nuevo Leon</span></li>
                     <li class="li1"><span>Manzanillo, Colima</span></li>
+                    <li class="li1"><span>Lazaro Cardenas, Michoacan</span></li>
                 </ul>
             </div>
             <div class="col-6">
@@ -426,37 +432,7 @@
         </footer>
     </div>
 
-    <body>
-        <form method="post">
-          <input type="button" value="Send Email" 
-              onclick="sendEmail()" />
-        </form>
-    </body>
-
-
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js" async defer></script>
-
-    <script src=
-        "https://smtpjs.com/v3/smtp.js">
-    </script>
-    
-    <script type="text/javascript">
-        function sendEmail() {
-        Email.send({
-            Host: "smtp.gmail.com",
-            Username: "leri.forwarding@gmail.com",
-            Password: "Grupoleri12",
-            To: 'leri.forwarding@gmail.com',
-            From: "leri.forwarding@gmail.com",
-            Subject: "Sending Email using javascript",
-            Body: "Well that was easy!!",
-        })
-            .then(function (message) {
-            alert("mail sent successfully")
-            });
-        }
-    </script>   
-
+    <script src="bootstrap.bundle.js"></script>
   
     <!--TO HIDE NAVBAR WHEN SCROLLING-->
     <script>var prevScrollpos = window.pageYOffset;
