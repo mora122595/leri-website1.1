@@ -85,7 +85,11 @@
         opacity: 1;
         }
         .azulito{
-            color: #4bccf9;
+            color: gray;
+            transition: 1.5s all ease;
+        }
+        .negro{
+            transition: 3s all ease;
         }
 
 </style>
@@ -119,7 +123,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <Span class="person"></Span>
+                            <Span class="bi bi-person-fill"></Span>
                             LOGIN
                         </a>
                       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -299,12 +303,12 @@
             </div>
             <div class="col-md-6">
                 <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle; padding-left: 15%; font-weight: 400;">
-                    <li class=""><span>Servicios de Comercio Exterior</span></li>
-                    <li class="li1"><span>Etiquetado de mercancía</span></li>
-                    <li class="li1"><span>Manejo de carga especializada y sobre dimensionada</span></li>
-                    <li class="li1"><span>Consolidación multiproveedor</span></li>
-                    <li class="li1"><span>Operación de hand carriers y charters</span></li>
-                    <li class="li1"><span>Distribución</span></li>
+                    <li class="reveal"><span>Servicios de Comercio Exterior</span></li>
+                    <li class="li1 reveal"><span>Etiquetado de mercancía</span></li>
+                    <li class="li1 reveal"><span>Manejo de carga especializada y sobre dimensionada</span></li>
+                    <li class="li1 reveal"><span>Consolidación multiproveedor</span></li>
+                    <li class="li1 reveal"><span>Operación de hand carriers y charters</span></li>
+                    <li class="li1 reveal"><span>Distribución</span></li>
                 </ul>
             </div>
         </div>
@@ -317,12 +321,12 @@
         </div>
         <div class="row">
             <div class="col-12" style="margin-top: 40px;">
-                <img class="img-fluid" src="assets/mapa.png">
+                <img class="img-fluid" src="assets/mundo-flat4.png">
             </div>
         </div>
         <div class="row mb-5 " style=" bottom: 50%;">
             <div class="col-12">
-                <p class="display-3 border-bottom" style=" font-weight: 700; color: #4bccf9; text-align: center;">PRESENCIA EN MÉXICO
+                <p class="display-3 border-bottom negro text-white"  style=" font-weight: 700; text-align: center;">PRESENCIA EN MÉXICO
                     <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
                 </p>
             </div>
@@ -349,10 +353,10 @@
                      garantizamos la continuidad de sus operaciones.
                 </p>
                 <ul class="display-6" style="margin-left:20px; font-weight: 350; font-weight: 400">
-                    <li class=""><span>Nuevo Laredo, Tamaulipas</span></li>
-                    <li class="li1"><span>Colombia, Nuevo León</span></li>
-                    <li class="li1"><span>Manzanillo, Colima</span></li>
-                    <li class="li1"><span>Lázaro Cárdenas, Michoacán</span></li>
+                    <li class="reveal"><span>Nuevo Laredo, Tamaulipas</span></li>
+                    <li class="li1 reveal"><span>Colombia, Nuevo León</span></li>
+                    <li class="li1 reveal"><span>Manzanillo, Colima</span></li>
+                    <li class="li1 reveal"><span>Lázaro Cárdenas, Michoacán</span></li>
                 </ul>
             </div>
             <div class="col-6">
@@ -361,7 +365,7 @@
         </div>
         
         <!--AGENTES ADUANALES-->
-        <div class="row text-center" >
+        <div class="row text-center pt-5" >
             <div class="col-12">
                 <p class="display-5 fw-bold" style="font-size: 2rem;">AGENTE ADUANAL MEXICANO</p>
             </div>
@@ -392,21 +396,38 @@
 
         <!--ICONOS-->
         <div class="row"></div>
+        <div class="container pb-4" style="background-color:#063e6a;">
+            <div class="row p-0">
+                <div class="row">
+                    <div class="d-flex justify-content-center pt-5">
+                        
+                            <p style="color:white;">
+                                <h1 class="bi bi-airplane bi-truck" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck-flatbed" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck-front" style="color:white;"></h1>
+                            </p>
+                        
+                    </div>
+                </div>
+                
 
-        <div class="row p-0">
-            <div class="col-12">
-                <p class="display-6 text-center" style="color:white;background-color:#063e6a; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
-                     <b>Trabajamos con todo tipo de industrias,<br></b> desde artículos para bebé, automotriz,
-                      maquinaria, mercancía HAZ-MAT, entre otras.<br><br> El personal de <b>GRUPO LERI</b> esta capacitado 
-                      para ofrecer un servicio personalizado según las necesidades de su empresa.
-                </p>
+                <div class="col-12">
+                    <p class="display-6 text-center" style="color:white;; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
+                         <b>Trabajamos con todo tipo de industrias,<br></b> desde artículos para bebé, automotriz,
+                          maquinaria, mercancía HAZ-MAT, entre otras.<br>
+                    </p>
+                </div>
+                <div class="col-12">
+                    <img class="img-fluid pb-5" src="assets/collage.png" style=" margin-top: -17px;">
+                </div>
+                <div class="col-12">
+                    <p class="display-6 text-center text-white"> El personal de <b>GRUPO LERI</b> esta capacitado 
+                        para ofrecer un servicio personalizado según las necesidades de su empresa.</p>
+                </div>
             </div>
-            <div class="col-12">
-                <img class="img-fluid pb-5" src="assets/collage.png" style=" background-color:#063e6a; margin-top: -17px;">
-            </div>
-            
-
         </div>
+        
 
         <!--CONTACTANOS-->
         <div class="row" style="margin-top: 40px;" id="contacto" >
@@ -532,7 +553,7 @@
     <script>
         function counter(){
         const counters = document.querySelectorAll('.value');
-        const speed = 7000;
+        const speed = 5000;
 
         counters.forEach( counter => {
         const animate = () => {
@@ -562,17 +583,35 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 75;
 
                 if (elementTop < windowHeight - elementVisible) {
                 reveals[i].classList.add("active");
-                } else {
-                reveals[i].classList.remove("active");
                 }
             }
         }
 
         window.addEventListener("scroll", reveal);
+    </script>
+
+
+    <script>
+    function appear() {
+        var reveals = document.querySelectorAll(".negro");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 75;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.remove("text-white");
+                
+                reveals[i].classList.add("azulito");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", appear);
     </script>
 
 <script>
@@ -581,7 +620,7 @@
         for (var i = 0; i < reveals.length; i++) {
             var windowHeight = window.innerHeight;
             var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 200;
+            var elementVisible = 150;
             if (elementTop < windowHeight - elementVisible) {
             counter();
             }
