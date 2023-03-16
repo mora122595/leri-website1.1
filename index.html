@@ -84,6 +84,9 @@
         transform: translateY(0);
         opacity: 1;
         }
+        .azulito{
+            color: #4bccf9;
+        }
 
 </style>
 
@@ -280,7 +283,7 @@
                     <img class="card-img rounded-0" src="assets/bodega-recortada2.png" alt="Card image">
                     <div class="card-img-overlay d-flex justify-content-center align-items-center flex-wrap">
                     <div class="display-1 text-center" style="font-weight: 900;">
-                        <span class="value" akhi="20000">000000</span><span style="font-size: 20%; ">sqft</span>
+                        <span class="value" akhi="20000">0</span><span style="font-size: 20%; ">sqft</span>
                         <p class="display-6" style="font-weight: 600; ">PARA ALMACENAJE EN BODEGA</p> 
                     </div>
                     </div>
@@ -527,8 +530,9 @@
 
     <!--counter animation-->
     <script>
+        function counter(){
         const counters = document.querySelectorAll('.value');
-        const speed = 303;
+        const speed = 7000;
 
         counters.forEach( counter => {
         const animate = () => {
@@ -547,28 +551,46 @@
    
         animate();
         });
+        }
+        
     </script>
 
 
     <script>
         function reveal() {
         var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
 
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-
-            if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-            } else {
-            reveals[i].classList.remove("active");
+                if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+                } else {
+                reveals[i].classList.remove("active");
+                }
             }
-        }
         }
 
         window.addEventListener("scroll", reveal);
     </script>
+
+<script>
+    function activate_counter() {
+    var reveals = document.querySelectorAll(".value");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 200;
+            if (elementTop < windowHeight - elementVisible) {
+            counter();
+            }
+        }
+    }
+
+    window.addEventListener("scroll", activate_counter);
+</script>
+
     
 </body>
 </html>
