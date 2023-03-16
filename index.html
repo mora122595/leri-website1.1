@@ -30,7 +30,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            transition: top 0.3s;
+            transition: top .5s;
             opacity: 0.9;
             z-index: 1;
         }
@@ -73,6 +73,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+        .reveal{
+        position: relative;
+        transform: translateY(75px);
+        opacity: 0;
+        transition: 1.5s all ease;
+        }
+        .reveal.active{
+        transform: translateY(0);
+        opacity: 1;
         }
 
 </style>
@@ -194,11 +204,11 @@
             </div>
             <div class="col-md-7">
                 <div class="row gy-0 " >
-                    <p class="h1 pl-5" style=" font-weight: 700;">Más de 30 años nos respaldan
+                    <p class="display-5 pl-5" style=" font-weight: 700; color: blue;">Más de 30 años nos respaldan
                     </p>
                </div>
                 <div class="row gy-0" >
-                    <p class="display-6" style="color:blue">Diseñamos estrategias óptimas para el 
+                    <p class="display-6" style="">Diseñamos estrategias óptimas para el 
                         envío de su mercancía vía terrestre, marítima y aérea.
                     </p>
                 </div>
@@ -266,7 +276,7 @@
         <!--ALMACENAJE-->
         <div class="row mt-5 z-0">
             <div class="col-12">
-                <div class="card   rounded-0" style="color: #ff6600;">
+                <div class="card   rounded-0" style="color: #fe7200;">
                     <img class="card-img rounded-0" src="assets/bodega-recortada2.png" alt="Card image">
                     <div class="card-img-overlay d-flex justify-content-center align-items-center flex-wrap">
                     <div class="display-1 text-center" style="font-weight: 900;">
@@ -279,13 +289,13 @@
         </div>
 
         <!--CONTAMOS CON...-->
-        <div class="row align-items-center" style="margin-top: 40px;">
+        <div class="row align-items-center reveal" style="margin-top: 40px;">
             <div class="col-md-6 " >
                 <p class="display-4 text-left" style=" font-weight: 700; color: black;">CONTAMOS CON  SERVICIOS  
                 ESPECIALIZADOS  COMO: </p> 
             </div>
             <div class="col-md-6">
-                <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle; padding-left: 15%;">
+                <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle; padding-left: 15%; font-weight: 400;">
                     <li class=""><span>Servicios de Comercio Exterior</span></li>
                     <li class="li1"><span>Etiquetado de mercancía</span></li>
                     <li class="li1"><span>Manejo de carga especializada y sobre dimensionada</span></li>
@@ -309,7 +319,7 @@
         </div>
         <div class="row mb-5 " style=" bottom: 50%;">
             <div class="col-12">
-                <p class="display-3 border-bottom" style=" font-weight: 700; color: blue; text-align: center;">PRESENCIA EN MÉXICO
+                <p class="display-3 border-bottom" style=" font-weight: 700; color: #4bccf9; text-align: center;">PRESENCIA EN MÉXICO
                     <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
                 </p>
             </div>
@@ -414,7 +424,7 @@
         </div>
 
         <!--FORM-->
-        <div class="row align-items-center" style="margin-top: 0px; padding-right: 7%;">
+        <div class="row align-items-center" style="margin-top: 0px;">
             <div class="col-5">
                 <img class="img-fluid d-none d-sm-block" src="assets/icono-azul2.png">
             </div>
@@ -445,17 +455,18 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <img src = "assets/mundito.png">
+                <img src = "assets/contacto3.png" width="50%">
             </div>
         </div>
+
         <div class="row pt-2">
             <div class="col-12 d-flex justify-content-center">
-                <p class="display-6" style="font-size: 1.5rem;"><b>Nuestra experiencia le garantiza su tranquilidad.</b></p>
+                <p class="display-6 fw-bold pt-2" style="font-size: 1.5rem;">Nuestra experiencia le garantiza su tranquilidad.</p>
             </div>
         </div>
 
     <!--FOOTER-->
-        <footer class="py-3 my-4">
+        <footer class="py-1 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted">NOSOTROS</a></li>
             <li class="nav-item"><a href="#servicios" class="nav-link px-2 text-muted">SERVICIOS</a></li>
@@ -464,6 +475,7 @@
           </ul>
           <p class="text-center text-muted">© 2023 Grupo LERI, Inc</p>
         </footer>
+        
 
         
 
@@ -535,6 +547,27 @@
    
         animate();
         });
+    </script>
+
+
+    <script>
+        function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+            } else {
+            reveals[i].classList.remove("active");
+            }
+        }
+        }
+
+        window.addEventListener("scroll", reveal);
     </script>
     
 </body>
