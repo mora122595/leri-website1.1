@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +25,14 @@
         }
         .nav-link:checked {
             color: pink;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s;
+            opacity: 0.9;
+            z-index: 1;
         }
 
         .cuadro{
@@ -70,15 +77,15 @@
 
 </style>
 
-<body>
+<body style="background-color: rgb(255, 255, 255); "> 
     
-    <nav class="navbar navbar-expand-lg navbar-hide-on-scroll border-bottom border-white" id="navbar" style="background-color:#000020;">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg border-bottom border-white z-3" id="navbar" style="background-color:#000020;">
+        <div class="container-fluid p-0">
             <a class="navbar-brand" href="#">
                 <img src="assets/logos-nav.png" alt="" width="120" height="30" onmouseover="hover_logo(this);" onmouseout="hoverOut_logo(this)">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <img src="assets/navbar-icon.png">
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -111,7 +118,7 @@
                   </ul>
             </div>
         </div>
-      </nav>
+    </nav>
     
     <div class="container-fluid p-0"> 
         <div class = "d-flex justify-content-center gy-0 ">
@@ -123,7 +130,7 @@
 
         <!--HEADER FRASE ESPA-->
 
-    <div class=" shadow container p-0">
+    <div class=" shadow container p-0" style="background-color: white;">
         <!--NOSOTROS-->
         <div class="row mt-3 " id="nosotros">
             <div class="col-12" >
@@ -257,13 +264,18 @@
         </div>
 
         <!--ALMACENAJE-->
-        <div class = "d-flex justify-content-center gy-0 image_container mt-5" style="margin-top: 0px; width: 100%;">
-            <img class="img-fluid" style="width: 100%;" src="assets/bodega-recortada2.png"/>
-            <div class="centered">
-                <p class="display-1 centered" style="line-height: 20%; font-weight: 900; color: white; font-size: 8.5rem;">
-                    <span class="value" akhi="20000">000000</span><span style="font-size: 20%;">sqft</span>
-                </p>
-            </div> 
+        <div class="row mt-5 z-0">
+            <div class="col-12">
+                <div class="card   rounded-0" style="color: #ff6600;">
+                    <img class="card-img rounded-0" src="assets/bodega-recortada2.png" alt="Card image">
+                    <div class="card-img-overlay d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="display-1 text-center" style="font-weight: 900;">
+                        <span class="value" akhi="20000">000000</span><span style="font-size: 20%; ">sqft</span>
+                        <p class="display-6" style="font-weight: 600; ">PARA ALMACENAJE EN BODEGA</p> 
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--CONTAMOS CON...-->
@@ -333,7 +345,37 @@
             <div class="col-6">
                 <img class="img-fluid d-none d-sm-block" src="assets/aduana1.png">
             </div>
-        </div>   
+        </div>
+        
+        <!--AGENTES ADUANALES-->
+        <div class="row text-center" >
+            <div class="col-12">
+                <p class="display-5 fw-bold" style="font-size: 2rem;">AGENTE ADUANAL MEXICANO</p>
+            </div>
+            <div class="col-12">
+                <p class="display-6 text-primary" style="font-size: 2rem;">Hector Fidencio Garza Mata</p>
+            </div>
+            <div class="col-12">
+                <p class="display-6 text-primary"  style="font-size: 2rem;">Patente 3540<br></p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <p class="display-5 fw-bold" style="font-size: 2rem;">AGENTE ADUANAL AMERICANO</p>
+            </div>
+            <div class="col-12">
+                <p class="display-6 text-primary" style="font-size: 2rem;">Ortiz International Inc.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+            </div>
+            <div class="col-12">
+            </div>
+            <div class="col-12">
+            </div>
+        </div>
 
         <!--ICONOS-->
         <div class="row"></div>
@@ -422,20 +464,25 @@
           </ul>
           <p class="text-center text-muted">© 2023 Grupo LERI, Inc</p>
         </footer>
+
+        
+
     </div>
 
     <script src="bootstrap.bundle.js"></script>
   
     <!--TO HIDE NAVBAR WHEN SCROLLING-->
-    <script>var prevScrollpos = window.pageYOffset;
+    <script>
+        var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
+          if (prevScrollpos > currentScrollPos) {
             document.getElementById("navbar").style.top = "0";
-        } else {
+          } else {
             document.getElementById("navbar").style.top = "-60px";
+          }
+          prevScrollpos = currentScrollPos;
         }
-        prevScrollpos = currentScrollPos;}
     </script>
 
     <!--change image when hovering-->
