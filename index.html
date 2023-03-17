@@ -86,10 +86,44 @@
         }
         .azulito{
             color: gray;
-            transition: 1.5s all ease;
+            transition: 5s all ease;
         }
         .negro{
-            transition: 3s all ease;
+            transition: 5s all ease;
+        }
+        .parallax-container {
+            /*  this is where the magic happens:  */
+            background-image: url("assets/bodega-recortada2.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+            text-shadow: 2px 2px 4px #424143;
+
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             justify-content: center;
+        }
+        .parallax-container2 {
+            /*  this is where the magic happens:  */
+            background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             justify-content: center;
         }
 
 </style>
@@ -102,7 +136,7 @@
                 <img src="assets/logos-nav.png" alt="" width="120" height="30" onmouseover="hover_logo(this);" onmouseout="hoverOut_logo(this)">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="assets/navbar-icon.png">
+                <img src="assets/navbar-icon.png" height="30">
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
@@ -227,17 +261,17 @@
         <div class="row g-0 " >
             <div class="col-4">
                 <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-1.png" class="card-img" id="1" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-4.png" class="card-img" id="4" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-7.png" class="card-img" id="7" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
@@ -245,17 +279,17 @@
 
             <div class="col-4">
                 <div class="row d-flex justify-content-center">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-2.png" class="card-img" id="2" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center ">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-5.png" class="card-img" id="5" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-8.png" class="card-img" id="8" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
@@ -263,17 +297,17 @@
 
             <div class="col-4">
                 <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-3.png" class="card-img" id="3" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-6.png" class="card-img" id="6" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
                 <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro" >
+                    <div class="card text-black border-0 cuadro shadow" >
                         <img src="assets/cuadro-texto-9.png" class="card-img" id="9" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
@@ -281,22 +315,17 @@
         </div>
 
         <!--ALMACENAJE-->
-        <div class="row mt-5 z-0">
+        <div class="row mt-5 z-0 parallax-container">
             <div class="col-12">
-                <div class="card   rounded-0" style="color: #fe7200;">
-                    <img class="card-img rounded-0" src="assets/bodega-recortada2.png" alt="Card image">
-                    <div class="card-img-overlay d-flex justify-content-center align-items-center flex-wrap">
                     <div class="display-1 text-center" style="font-weight: 900;">
-                        <span class="value" akhi="20000">0</span><span style="font-size: 20%; ">sqft</span>
-                        <p class="display-6" style="font-weight: 600; ">PARA ALMACENAJE EN BODEGA</p> 
+                        <p class="value" akhi="20000" style=" color:orange;">0</span><span style="font-size: 20%; color:orange;">sqft</p>
+                        <p class="display-6" style="font-weight: 600;color:orange;">PARA ALMACENAJE EN BODEGA</p> 
                     </div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <!--CONTAMOS CON...-->
-        <div class="row align-items-center reveal" style="margin-top: 40px;">
+        <div class="row align-items-center reveal pt-5 pb-5">
             <div class="col-md-6 " >
                 <p class="display-4 text-left" style=" font-weight: 700; color: black;">CONTAMOS CON  SERVICIOS  
                 ESPECIALIZADOS  COMO: </p> 
@@ -314,22 +343,25 @@
         </div>
 
         <!--ALCANCE-->
-        <div class="row mt-5" id = "alcance" >
-            <div class="col-12">
-                <img class="img-fluid" src="assets/alcance.png" style="padding-left:5%; padding-right:5%;">
+        <div class="container p-0 parallax-container">
+            <div class="row mt-5" id = "alcance" >
+                <div class="col-12">
+                    <img class="img-fluid" src="assets/alcance.png" style="padding-left:5%; padding-right:5%;">
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12" style="margin-top: 40px;">
-                <img class="img-fluid" src="assets/mundo-flat4.png">
+            <div class="row">
+                <div class="col-12" style="margin-top: 40px;">
+                    <img class="img-fluid" src="assets/mundo-flat4.png">
+                </div>
             </div>
-        </div>
-        <div class="row mb-5 " style=" bottom: 50%;">
-            <div class="col-12">
-                <p class="display-3 border-bottom negro text-white"  style=" font-weight: 700; text-align: center;">PRESENCIA EN MÉXICO
-                    <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
-                </p>
+            <div class="row mb-5 " style=" bottom: 50%;">
+                <div class="col-12">
+                    <p class="display-3 border-bottom negro text-white"  style=" font-weight: 700; text-align: center;">PRESENCIA EN MÉXICO
+                        <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
+                    </p>
+                </div>
             </div>
+
         </div>
 
 
@@ -396,7 +428,7 @@
 
         <!--ICONOS-->
         <div class="row"></div>
-        <div class="container pb-4" style="background-color:#063e6a;">
+        <div class="container pb-4 parallax-container" style="background-color:#063e6a;">
             <div class="row p-0">
                 <div class="row">
                     <div class="d-flex justify-content-center pt-5">
@@ -506,6 +538,7 @@
     </div>
 
     <script src="bootstrap.bundle.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
   
     <!--TO HIDE NAVBAR WHEN SCROLLING-->
     <script>
@@ -553,7 +586,7 @@
     <script>
         function counter(){
         const counters = document.querySelectorAll('.value');
-        const speed = 5000;
+        const speed = 10;
 
         counters.forEach( counter => {
         const animate = () => {
@@ -629,6 +662,7 @@
 
     window.addEventListener("scroll", activate_counter);
 </script>
+
 
     
 </body>
