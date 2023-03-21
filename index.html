@@ -203,7 +203,9 @@
         .display-6{
             font-family: 'DM Sans', sans-serif;
         }
-        
+        .bi:hover{
+            color:#ff6600;
+        }
         
 
 </style>
@@ -246,9 +248,9 @@
                             LOGIN
                         </a>
                       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Luis</a></li>
-                        <li><a class="dropdown-item" href="#">ES</a></li>
-                        <li><a class="dropdown-item" href="#">PUTISIMO</a></li>
+                        <li><a class="dropdown-item" href="#">Username</a></li>
+                        <li><a class="dropdown-item" href="#">Password</a></li>
+                        <li><a class="dropdown-item" href="#">enter</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -433,28 +435,15 @@
         
         
         <!--ALCANCE-->
-        <!--
-        <div class="container p-0 parallax-container2  ">
+        
+        <div class="container p-0 ">
             <div class="row mt-5 mb-5" id = "alcance" >
                 <div class="col-12">
                     <img class="img-fluid" src="assets/alcance.png" style="padding-left:5%; padding-right:5%;">
                 </div>
             </div>
-            <div class="row" style="margin-top: 15%;">
-                <div class="col-12" >
-                    <img class="img-fluid" src="assets/mundo-flat5.png" style="padding-left: 5%; padding-right: 5%;">
-                </div>
-            </div>
-            <div class="row" style="margin-bottom: 15%;" >
-                <div class="col-12">
-                    <p class="display-3 "  style=" font-weight: 700; text-align: center; color: rgb(68, 238, 68);">PRESENCIA EN MÉXICO
-                        <br> Y ESTADOS UNIDOS DE AMÉRICA.
-                    </p>
-                </div>
-            </div>
-
+        
         </div>
-        -->
 
 
         <!--ADUANAS-->
@@ -489,22 +478,16 @@
         </div>
         
         <!--AGENTES ADUANALES-->
-        <div class="row text-center pt-5" >
-            <div class="col-12">
+        <div class="row text-center pt-5 pb-5" >
+            <div class="col-md-6">
                 <p class="display-5 fw-bold" style="font-size: 2rem;">AGENTE ADUANAL MEXICANO</p>
+                <div style="line-height: 50%;">
+                    <p class="display-6 text-primary" style="font-size: 2rem;">Hector Fidencio Garza Mata
+                    <br>Patente 3540</p>
+                </div>
             </div>
-            <div class="col-12">
-                <p class="display-6 text-primary" style="font-size: 2rem;">Hector Fidencio Garza Mata</p>
-            </div>
-            <div class="col-12">
-                <p class="display-6 text-primary"  style="font-size: 2rem;">Patente 3540<br></p>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-12">
+            <div class="col-6">
                 <p class="display-5 fw-bold" style="font-size: 2rem;">AGENTE ADUANAL AMERICANO</p>
-            </div>
-            <div class="col-12">
                 <p class="display-6 text-primary" style="font-size: 2rem;">Ortiz International Inc.</p>
             </div>
         </div>
@@ -615,14 +598,19 @@
 
     <!--FOOTER-->
         <footer class="py-1 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted">NOSOTROS</a></li>
-            <li class="nav-item"><a href="#servicios" class="nav-link px-2 text-muted">SERVICIOS</a></li>
-            <li class="nav-item"><a href="#alcance" class="nav-link px-2 text-muted">ALCANCE</a></li>
-            <li class="nav-item"><a href="#contacto" class="nav-link px-2 text-muted">CONTACTANOS</a></li>
-          </ul>
-          <p class="text-center text-muted">© 2023 Grupo LERI, Inc</p>
-          <p class="text-center text-muted">AGRADECIMINETO ESPECIAL AL GRUPO SA POR SUS SUGERENCIAS</p>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted">NOSOTROS</a></li>
+                <li class="nav-item"><a href="#servicios" class="nav-link px-2 text-muted">SERVICIOS</a></li>
+                <li class="nav-item"><a href="#alcance" class="nav-link px-2 text-muted">ALCANCE</a></li>
+                <li class="nav-item"><a href="#contacto" class="nav-link px-2 text-muted">CONTACTANOS</a></li>
+            </ul>
+                <p class="text-center text-muted">© 2023 Grupo LERI, Inc</p>
+                <div class="d-flex justify-content-center">
+                        <a href="https://www.linkedin.com/company/grupo-leri/" target="_blank" rel="noopener noreferrer" id = "icon" class="bi bi-linkedin" style="color:#b2aacb"></a><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                        <a href="#nosotros" id = "icon" class="bi bi-whatsapp" style="color:#b2aacb"></a><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                        <a href="https://www.facebook.com/grupoleri" target="_blank" rel="noopener noreferrer" id = "icon" class="bi bi-facebook" style="color:#b2aacb" ></a><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                        <a href="#nosotros" id = "icon" class="bi bi-instagram" style="color:#b2aacb"></a>
+                </div>
         </footer>
         
 
@@ -754,6 +742,18 @@
     }
 
     window.addEventListener("scroll", activate_counter);
+</script>
+
+
+<script>
+    function change_icon() {
+    var reveals = document.querySelectorAll(".bi");
+    print(reveals)
+        reveals[5].target.style.color = "#ff6600";
+    
+    
+    }
+    window.addEventListener("mouseenter", change_icon);
 </script>
 
 
