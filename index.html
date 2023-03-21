@@ -9,8 +9,10 @@
 
 <link rel = "stylesheet" href="bootstrap.css">
 <link rel = "stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
-
+<style>@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Unbounded:wght@500&display=swap');</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Raleway:wght@100;500&display=swap" rel="stylesheet">
 
 
 <style>
@@ -42,9 +44,6 @@
         }
         .nav-link:hover {
             color: #4bccf9;
-        }
-        .nav-link:checked {
-            color: pink;
         }
         .navbar{
             position: fixed;
@@ -104,10 +103,14 @@
             color: blue;
             
             transition: 5s all ease;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
         }
         .negro{
             font-weight: 500;
             transition: 5s all ease;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
         }
         .parallax-container {
             /*  this is where the magic happens:  */
@@ -129,11 +132,15 @@
         }
         .parallax-container2 {
             /*  this is where the magic happens:  */
-            background-image: url("https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+            background-image: url("assets/IMG_5128-azul2.png");
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
-            background-size: 100% 100%;  
+            background-size: 100% 100%;
+            
+            text-shadow: 2px 2px 4px #424143;
+            color:#ff6600;
+            
             
 
             /* dimensions are important, ensure it is tall enough to scroll */ 
@@ -143,12 +150,70 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-             justify-content: center;
+            justify-content: center;
         }
+        .bg-divided{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(
+                to right,
+                #ff6600 0%,
+                #ff6600 50%,
+                #4bccf9 50%,
+                #4bccf9 100%
+            );
+        }
+        .float{
+            position:fixed;
+            width:60px;
+            height:60px;
+            bottom:10px;
+            right:19px;
+            background-color:#25d366;
+            color:#FFF;
+            border-radius:50px;
+            text-align:center;
+            font-size:30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index:100;
+        }
+
+        .my-float{
+            margin-top:16px;
+        }
+        .display-1{
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
+        }
+        .display-2{
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
+        }
+        .display-3{
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
+        }
+        .display-4{
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-family: 'Unbounded', cursive;
+        }
+        .display-5{
+            font-family: 'Raleway', sans-serif;
+        }
+        .display-6{
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        
 
 </style>
 
-<body> 
+<body>
+    
+    <link rel="stylesheet"  style = "margin-left: 50px;" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="tel:9565161917" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
     
     <nav class="navbar navbar-expand-lg border-bottom border-white z-3" id="navbar" style="background-color:#000020;">
         <div class="container-fluid p-0">
@@ -269,7 +334,7 @@
                     </p>
                </div>
                 <div class="row gy-0" >
-                    <p class="display-6" style="">Diseñamos estrategias óptimas para el 
+                    <p class="display-6" >Diseñamos estrategias óptimas para el 
                         envío de su mercancía vía terrestre, marítima y aérea.
                     </p>
                 </div>
@@ -339,52 +404,57 @@
             <div class="row mt-5 z-0 ">
                 <div class="col-12 ">
                         <div class="display-1 text-center" style="font-weight: 900;">
-                            <span class="value" akhi="20000" style=" color:orange;">0</span><span style="font-size: 20%; color:orange;">sqft</span>
-                            <p class="display-6" style="font-weight: 600;color:orange;">PARA ALMACENAJE EN BODEGA</p> 
+                            <span style=" color:#ff6600;">20,000</span><span style="font-size: 20%; color:#ff6600;">sqft</span>
+                            <p class="display-6" style="font-weight: 600;color:#ff6600;">PARA ALMACENAJE EN BODEGA</p> 
                         </div>
                 </div>
             </div>
         </div>
 
         <!--CONTAMOS CON...-->
-        <div class="row align-items-center reveal pt-5 pb-5">
-            <div class="col-md-6 " >
-                <p class="display-4 text-left ind-lg" style=" font-weight: 700;">CONTAMOS CON  SERVICIOS  
-                ESPECIALIZADOS  COMO: </p> 
-            </div>
-            <div class="col-md-6">
-                <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle; padding-left: 15%; font-weight: 400;">
-                    <li class="reveal"><span>Servicios de Comercio Exterior</span></li>
-                    <li class="li1 reveal"><span>Etiquetado de mercancía</span></li>
-                    <li class="li1 reveal"><span>Manejo de carga especializada y sobre dimensionada</span></li>
-                    <li class="li1 reveal"><span>Consolidación multiproveedor</span></li>
-                    <li class="li1 reveal"><span>Operación de hand carriers y charters</span></li>
-                    <li class="li1 reveal"><span>Distribución</span></li>
-                </ul>
+        <div class="container bg-divided">
+            <div class="row align-items-center reveal pt-5 pb-5" >
+                <div class="col-md-6" >
+                    <p class="display-4 text-left ind-lg text-white" style=" font-weight: 700;">CONTAMOS CON  SERVICIOS  
+                    ESPECIALIZADOS  COMO: </p> 
+                </div>
+                <div class="col-md-6">
+                    <ul class="display-6" style="color:white; font-weight: 350;  list-style-type: circle; padding-left: 8%; font-weight: 400;">
+                        <li class="reveal"><span>Servicios de Comercio Exterior</span></li>
+                        <li class="li1 reveal"><span>Etiquetado de mercancía</span></li>
+                        <li class="li1 reveal"><span>Manejo de carga especializada y sobre dimensionada</span></li>
+                        <li class="li1 reveal"><span>Consolidación multiproveedor</span></li>
+                        <li class="li1 reveal"><span>Operación de hand carriers y charters</span></li>
+                        <li class="li1 reveal"><span>Distribución</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
-
+        
+        
         <!--ALCANCE-->
-        <div class="container p-0 parallax-container">
-            <div class="row mt-5" id = "alcance" >
+        <!--
+        <div class="container p-0 parallax-container2  ">
+            <div class="row mt-5 mb-5" id = "alcance" >
                 <div class="col-12">
                     <img class="img-fluid" src="assets/alcance.png" style="padding-left:5%; padding-right:5%;">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12" style="margin-top: 40px;">
-                    <img class="img-fluid" src="assets/mundo-flat4.png">
+            <div class="row" style="margin-top: 15%;">
+                <div class="col-12" >
+                    <img class="img-fluid" src="assets/mundo-flat5.png" style="padding-left: 5%; padding-right: 5%;">
                 </div>
             </div>
-            <div class="row mb-5 " style=" bottom: 50%;">
+            <div class="row" style="margin-bottom: 15%;" >
                 <div class="col-12">
-                    <p class="display-3  text-white"  style=" font-weight: 700; text-align: center;">PRESENCIA EN MÉXICO
-                        <br> Y ESTADOS UNIDOS DE AMÉRICA.<br><br>
+                    <p class="display-3 "  style=" font-weight: 700; text-align: center; color: rgb(68, 238, 68);">PRESENCIA EN MÉXICO
+                        <br> Y ESTADOS UNIDOS DE AMÉRICA.
                     </p>
                 </div>
             </div>
 
         </div>
+        -->
 
 
         <!--ADUANAS-->
@@ -450,16 +520,16 @@
 
         <!--ICONOS-->
         <div class="row"></div>
-        <div class="container pb-4 parallax-container" style="background-color:#063e6a;">
+        <div class="container pb-4 parallax-container2" style="background-color:#063e6a;">
             <div class="row p-0">
                 <div class="row">
                     <div class="d-flex justify-content-center pt-5">
                         
-                            <p style="color:white;">
-                                <h1 class="bi bi-airplane bi-truck" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                                <h1 class="bi bi-truck" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                                <h1 class="bi bi-truck-flatbed" style="color:white;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-                                <h1 class="bi bi-truck-front" style="color:white;"></h1>
+                            <p style="color:#ff6600;">
+                                <h1 class="bi bi-airplane bi-truck" style="color:#ff6600;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck" style="color:#ff6600;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck-flatbed" style="color:#ff6600;"></h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <h1 class="bi bi-truck-front" style="color:#ff6600;"></h1>
                             </p>
                         
                     </div>
@@ -467,13 +537,13 @@
                 
 
                 <div class="col-12">
-                    <p class="display-6 text-center" style="color:white;; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
+                    <p class="display-6 text-center" style="color:white; padding-bottom: 29px; font-size: 2rem;"><BR>Nuestro objetivo es impulsar su crecimiento.<br><br>
                          <b>Trabajamos con todo tipo de industrias,<br></b> desde artículos para bebé, automotriz,
                           maquinaria, mercancía HAZ-MAT, entre otras.<br>
                     </p>
                 </div>
                 <div class="col-12">
-                    <img class="img-fluid pb-5" src="assets/collage.png" style=" margin-top: -17px;">
+                    <img class="img-fluid pb-5" src="assets/collage.png" style=" margin-top: -17px; filter: drop-shadow(0 0 0.75rem black);">
                 </div>
                 <div class="col-12">
                     <p class="display-6 text-center text-white"> El personal de <b>GRUPO LERI</b> esta capacitado 
