@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>hacem
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
                 padding-left: 5%;
                 padding-right: 5%;
             }
-            .card{
+            .cuadro{
                 width: 70%;
                 margin-top: 10%;
             }
@@ -30,7 +30,7 @@
             .ind-lg{
                 padding-left: 5%;
             }
-            .card{
+            .cuadro{
                 width: 60%;
                 margin-top: 10%;
             }
@@ -54,7 +54,6 @@
             z-index: 1;
         }
 
-        
         .img-text-container {
             position: relative;
         }
@@ -75,9 +74,7 @@
             color: #ff6600;
             font-size: 60px;
         }
-        .card1{
-            background: url("assets/cuadro1-naranja.png") no-repeat;
-        }
+        
         .image_container{
             position: relative;
             text-align: center;
@@ -95,12 +92,23 @@
         opacity: 0;
         transition: 1.5s all ease;
         }
+
+        .reveal2{
+        position: relative;
+        transform: translateY(35px);
+        opacity: 0;
+        transition: 1.5s all ease;
+        }
+        .reveal2.active{
+            transform: translateY(0);
+            opacity: 1;
+        }
         .reveal.active{
         transform: translateY(0);
         opacity: 1;
         }
         .azulito{
-            color: blue;
+            color: #1a2ded;
             
             transition: 5s all ease;
             font-family: 'PT Sans Narrow', sans-serif;
@@ -132,7 +140,7 @@
         }
         .parallax-container2 {
             /*  this is where the magic happens:  */
-            background-image: url("assets/IMG_5128-azul2.png");
+            background-image: url("assets/IMG_5128-4.png");
             background-attachment: fixed;
             background-position: center;
             background-size: cover;
@@ -141,8 +149,6 @@
             text-shadow: 2px 2px 4px #424143;
             color:#ff6600;
             
-            
-
             /* dimensions are important, ensure it is tall enough to scroll */ 
             min-height: 100vh;
 
@@ -159,8 +165,8 @@
                 to right,
                 #ff6600 0%,
                 #ff6600 50%,
-                #4bccf9 50%,
-                #4bccf9 100%
+                #ffffff 50%,
+                #ffffff 100%
             );
         }
         .float{
@@ -206,11 +212,20 @@
         .bi:hover{
             color:#ff6600;
         }
-        
+        .box {
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+        }
+        .login:{
+            color:#ff6600
+
+        }
 
 </style>
 
-<body>
+<body style="background-color: #eceef1;">
     
     <link rel="stylesheet"  style = "margin-left: 50px;" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <a href="tel:9565161917" class="float" target="_blank">
@@ -242,9 +257,9 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
-                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <Span class="bi bi-person-fill"></Span>
+                        <a class="nav-link dropdown-toggle login" href="#" id="navbarDarkDropdownMenuLink"
+                        role="button signin" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Span class="bi bi-person-fill "></Span>
                             LOGIN
                         </a>
                       <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -288,13 +303,13 @@
         <!--SOMOS-->
         <div class="row mt-4" >
             <div class="col-md-4 mt-3">
-                <img class="img-fluid" src="assets/img1.png"/>
+                <img class="img-fluid reveal2" src="assets/img1.png"/>
             </div>
             <div class="col-md-4 mt-3">
-                <img class="img-fluid" src="assets/img2.png"/>
+                <img class="img-fluid reveal2" src="assets/img2.png"/>
             </div>
             <div class="col-md-4 mt-3">
-                <img class="img-fluid"  src="assets/imagen3-2.png"/>
+                <img class="img-fluid reveal2"  src="assets/imagen3-2.png"/>
             </div>
         </div>
 
@@ -345,61 +360,47 @@
 
 
         <!--CUADRITOS-->
-        <div class="row row-squares g-0 " >
-            <div class="col-4">
-                <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-1.png" class="card-img" id="1" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+        <div class = "container">
+            <div class="row " >
+                <div class="col-4 ">
+                    <div class="row d-flex justify-content-end reveal" id="ex1">
+                        <img src="assets/cuadro-texto-1.png" class=" cuadro"  id="1" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                        <div class="row d-flex justify-content-end reveal ">
+                        <img src="assets/cuadro-texto-4.png" class=" shadow cuadro" id="4" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                    <div class="row d-flex justify-content-end reveal ">
+                        <img src="assets/cuadro-texto-7.png" class=" shadow cuadro" id="7" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
-                <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-4.png" class="card-img" id="4" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+    
+                <div class="col-4">
+                    <div class="row d-flex justify-content-center reveal ">
+                        <img src="assets/cuadro-texto-2.png" class=" shadow cuadro" id="2" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                    <div class="row d-flex justify-content-center reveal ">
+                        <img src="assets/cuadro-texto-5.png" class=" shadow cuadro" id="5" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                    <div class="row d-flex justify-content-center reveal ">
+                        <img src="assets/cuadro-texto-8.png" class=" shadow cuadro" id="8" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
-                <div class="row d-flex justify-content-end">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-7.png" class="card-img" id="7" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+    
+                <div class="col-4">
+                    <div class="row d-flex justify-content-start reveal ">
+                        <img src="assets/cuadro-texto-3.png" class=" shadow cuadro" id="3" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                    <div class="row d-flex justify-content-start reveal ">
+                        <img src="assets/cuadro-texto-6.png" class=" shadow cuadro" id="6" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
+                    </div>
+                    <div class="row d-flex justify-content-start reveal ">
+                        <img src="assets/cuadro-texto-9.png" class=" shadow cuadro" id="9" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
                     </div>
                 </div>
             </div>
 
-            <div class="col-4">
-                <div class="row d-flex justify-content-center">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-2.png" class="card-img" id="2" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-center ">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-5.png" class="card-img" id="5" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-center">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-8.png" class="card-img" id="8" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4">
-                <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-3.png" class="card-img" id="3" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-6.png" class="card-img" id="6" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-                <div class="row d-flex justify-content-start">
-                    <div class="card text-black border-0 cuadro shadow" >
-                        <img src="assets/cuadro-texto-9.png" class="card-img" id="9" onmouseover="hover2(this);" onmouseout="hoverOut(this)">
-                    </div>
-                </div>
-            </div>
         </div>
+        
 
         <!--ALMACENAJE-->
         <div class="container parallax-container mt-5 p-0">
@@ -421,7 +422,7 @@
                     ESPECIALIZADOS  COMO: </p> 
                 </div>
                 <div class="col-md-6">
-                    <ul class="display-6" style="color:white; font-weight: 350;  list-style-type: circle; padding-left: 8%; font-weight: 400;">
+                    <ul class="display-6" style="color:blue; font-weight: 350;  list-style-type: circle; padding-left: 8%; font-weight: 400;">
                         <li class="reveal"><span>Servicios de Comercio Exterior</span></li>
                         <li class="li1 reveal"><span>Etiquetado de mercancía</span></li>
                         <li class="li1 reveal"><span>Manejo de carga especializada y sobre dimensionada</span></li>
@@ -599,7 +600,7 @@
     <!--FOOTER-->
         <footer class="py-1 my-4">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted">NOSOTROS</a></li>
+                <li class="nav-item"><a href="#nosotros" class="nav-link px-2 text-muted active">NOSOTROS</a></li>
                 <li class="nav-item"><a href="#servicios" class="nav-link px-2 text-muted">SERVICIOS</a></li>
                 <li class="nav-item"><a href="#alcance" class="nav-link px-2 text-muted">ALCANCE</a></li>
                 <li class="nav-item"><a href="#contacto" class="nav-link px-2 text-muted">CONTACTANOS</a></li>
@@ -611,8 +612,7 @@
                         <a href="https://www.facebook.com/grupoleri" target="_blank" rel="noopener noreferrer" id = "icon" class="bi bi-facebook" style="color:#b2aacb" ></a><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
                         <a href="#nosotros" id = "icon" class="bi bi-instagram" style="color:#b2aacb"></a>
                 </div>
-        </footer>
-        
+        </footer>        
 
         
 
@@ -708,6 +708,23 @@
         window.addEventListener("scroll", reveal);
     </script>
 
+    <script>
+        function reveal2() {
+        var reveals2 = document.querySelectorAll(".reveal2");
+            for (var i = 0; i < reveals2.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals2[i].getBoundingClientRect().top;
+                var elementVisible = 35;
+
+                if (elementTop < windowHeight - elementVisible) {
+                reveals2[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal2);
+    </script>
+
 
     <script>
     function appear() {
@@ -756,7 +773,37 @@
     window.addEventListener("mouseenter", change_icon);
 </script>
 
+<script>
+    let constrain = 80;
+    
+        let mouseOverContainer = document.getElementById("ex1");
+        let ex1Layer = document.getElementById("1");
 
+        function transforms(x, y, el) {
+        let box = el.getBoundingClientRect();
+        let calcX = -(y - box.y - (box.height / 2)) / constrain;
+        let calcY = (x - box.x - (box.width / 2)) / constrain;
+        
+        return "perspective(100px) "
+            + "   rotateX("+ calcX +"deg) "
+            + "   rotateY("+ calcY +"deg) ";
+        };
+
+        function transformElement(el, xyEl) {
+        el.style.transform  = transforms.apply(null, xyEl);
+        }
+
+        mouseOverContainer.onmousemove = function(e) {
+        let xy = [e.clientX, e.clientY];
+        let position = xy.concat([ex1Layer]);
+
+        window.requestAnimationFrame(function(){
+            transformElement(ex1Layer, position);
+        });
+    };
+        
+    
+</script>
     
 </body>
 </html>
