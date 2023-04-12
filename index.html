@@ -14,263 +14,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Raleway:wght@100;500&display=swap" rel="stylesheet">
-
-
-<style>
-        @media screen and (min-width: 540px) {
-            .ind-sm{
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-            .cuadro{
-                width: 70%;
-                margin-top: 10%;
-            }
-            .parallax-container {
-            /*  this is where the magic happens:  */
-            background-image: url("assets/bodega-recortada2.png");
-            background-attachment: fixed;
-            background-position: center;
-            background-size: 100% 100%; 
-
-            text-shadow: 2px 2px 4px #424143;
-
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 100vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-             justify-content: center;
-            }
-
-            .parallax-container2 {
-            /*  this is where the magic happens:  */
-            background-image: url("assets/IMG_5128-4.png");
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            background-size: 100% 100%;
-            
-            text-shadow: 2px 2px 4px #424143;
-            color:#ff6600;
-            
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 100vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            }
-        }
-        @media screen and (max-width: 540px) {
-            .ind-lg{
-                padding-left: 5%;
-            }
-            .cuadro{
-                width: 85%;
-                margin-top: 10%;
-            }
-            .row{
-                padding: 0,0,0,0;
-            }
-            .parallax-container {
-            /*  this is where the magic happens:  */
-            background-color: #1a2ded;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: 100% 100%; 
-
-            text-shadow: 2px 2px 4px #424143;
-
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 50vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-             justify-content: center;
-            }
-
-            .parallax-container2 {
-            /*  this is where the magic happens:  */
-            background-color: #1a2ded;
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            background-size: 100% 100%;
-            
-            text-shadow: 2px 2px 4px #424143;
-            color:#ff6600;
-            
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 100vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            }
-        }
-        
-        .nav-link{
-            color:white;
-        }
-        .nav-link:hover {
-            color: #4bccf9;
-        }
-        .navbar{
-            position: fixed;
-            top: 0;
-            width: 100%;
-            transition: top .5s;
-            opacity: 0.9;
-            z-index: 1;
-        }
-
-        .img-text-container {
-            position: relative;
-        }
-
-        .inner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #fff;
-            padding: 30px;
-        }
-        .li1{
-            margin-top: 8px;
-        }
-        li::marker {
-            color: #ff6600;
-            font-size: 60px;
-        }
-        
-        .image_container{
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .reveal{
-            position: relative;
-            transform: translateY(75px);
-            opacity: 0;
-            transition: 1.5s all ease;
-        }
-
-        .reveal2{
-            position: relative;
-            transform: translateY(35px);
-            opacity: 0;
-            transition: 1.5s all ease;
-        }
-        .reveal2.active{
-            transform: translateY(0);
-            opacity: 1;
-        }
-        .reveal.active{
-            transform: translateY(0);
-            opacity: 1;
-        }
-        .azulito{
-            color: #1a2ded;
-            
-            transition: 5s all ease;
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .negro{
-            font-weight: 500;
-            transition: 5s all ease;
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .bg-divided{
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(
-                to right,
-                #ff6600 0%,
-                #ff6600 50%,
-                #ffffff 50%,
-                #ffffff 100%
-            );
-        }
-        .float{
-            position:fixed;
-            width:60px;
-            height:60px;
-            bottom:10px;
-            right:19px;
-            background-color:#25d366;
-            color:#FFF;
-            border-radius:50px;
-            text-align:center;
-            font-size:30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index:100;
-        }
-
-        .my-float{
-            margin-top:16px;
-        }
-        .display-1{
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .display-2{
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .display-3{
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .display-4{
-            font-family: 'PT Sans Narrow', sans-serif;
-            font-family: 'Unbounded', cursive;
-        }
-        .display-5{
-            font-family: 'Raleway', sans-serif;
-        }
-        .display-6{
-            font-family: 'DM Sans', sans-serif;
-        }
-        .bi:hover{
-            color:#ff6600;
-        }
-        .box {
-            border: 2px solid red;
-            height: 100px;
-            width: 100px;
-            position: absolute;
-        }
-
-</style>
+<link rel='stylesheet' href='index.css'>
 
 <body style="background-color: #eceef1;">
     
-    <!--
-    <link rel="stylesheet"  style = "margin-left: 50px;" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <a href="tel:9565161917" class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </a>
-    -->
-    
+    <!--BARRA DE NAVEGACION-->
     <nav class="navbar navbar-expand-lg border-bottom border-white z-3" id="navbar" style="background-color:#000020;">
         <div class="container-fluid p-0">
             <a class="navbar-brand" href="#">
@@ -322,6 +70,8 @@
         </div>
     </nav>
     
+
+    <!--IMAGENES DEL HEADER-->
     <div class="container-fluid p-0 d-none d-md-block"> 
         <div class = "d-flex justify-content-center gy-0 ">
             <img class="img-fluid"  src="assets/header3.png"/>
@@ -512,7 +262,6 @@
         
         
         <!--ALCANCE-->
-        
         <div class="container p-0 ">
             <div class="row mt-5 mb-5" id = "alcance" >
                 <div class="col-12">
@@ -569,14 +318,6 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12">
-            </div>
-            <div class="col-12">
-            </div>
-            <div class="col-12">
-            </div>
-        </div>
 
         <!--ICONOS-->
         <div class="row"></div>
@@ -671,11 +412,29 @@
             </div>
         </div>
 
+
+
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <img src = "assets/contacto3.png" width="50%">
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+                <div class= "row">
+                    <img src = "assets/logoleri.png" width="45%">
+                </div>
+                <div class= "row">
+                    <p>testing</p>
+                </div>
+            </div>
+            <div class="col-6 d-flex justify-content-start">
+                <img src = "assets/logosva.png" width="35%">
+            </div>
+        </div>
+
+
 
         
 
@@ -742,33 +501,6 @@
     </script>
 
 
-    <!--counter animation-->
-    <script>
-        function counter(){
-        const counters = document.querySelectorAll('.value');
-        const speed = 10;
-
-        counters.forEach( counter => {
-        const animate = () => {
-            const value = +counter.getAttribute('akhi');
-            const data = +counter.innerText;
-            
-            const time = value / speed;
-            if(data < value) {
-                counter.innerText = Math.ceil(data + time);
-                setTimeout(animate, 1);
-                }else{
-                counter.innerText = value;
-                }
-            
-        }
-   
-        animate();
-        });
-        }
-        
-    </script>
-
     <script>
         function reveal() {
         var reveals = document.querySelectorAll(".reveal");
@@ -817,21 +549,7 @@
         window.addEventListener("scroll", appear);
     </script>
 
-<script>
-    function activate_counter() {
-    var reveals = document.querySelectorAll(".value");
-        for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
-            if (elementTop < windowHeight - elementVisible) {
-            counter();
-            }
-        }
-    }
 
-    window.addEventListener("scroll", activate_counter);
-</script>
 
 
 <script>
@@ -844,37 +562,6 @@
     window.addEventListener("mouseenter", change_icon);
 </script>
 
-<script>
-    let constrain = 80;
-    
-        let mouseOverContainer = document.getElementById("ex1");
-        let ex1Layer = document.getElementById("1");
-
-        function transforms(x, y, el) {
-        let box = el.getBoundingClientRect();
-        let calcX = -(y - box.y - (box.height / 2)) / constrain;
-        let calcY = (x - box.x - (box.width / 2)) / constrain;
-        
-        return "perspective(100px) "
-            + "   rotateX("+ calcX +"deg) "
-            + "   rotateY("+ calcY +"deg) ";
-        };
-
-        function transformElement(el, xyEl) {
-        el.style.transform  = transforms.apply(null, xyEl);
-        }
-
-        mouseOverContainer.onmousemove = function(e) {
-        let xy = [e.clientX, e.clientY];
-        let position = xy.concat([ex1Layer]);
-
-        window.requestAnimationFrame(function(){
-            transformElement(ex1Layer, position);
-        });
-    };
-        
-    
-</script>
     
 </body>
 </html>
