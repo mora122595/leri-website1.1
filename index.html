@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grupo LERI</title>
+  <link rel="icon" type="image/x-icon" href="assets/mundito.png">
 </head>
 
 <link rel = "stylesheet" href="bootstrap.css">
@@ -25,6 +26,44 @@
                 width: 70%;
                 margin-top: 10%;
             }
+            .parallax-container {
+            /*  this is where the magic happens:  */
+            background-image: url("assets/bodega-recortada2.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100% 100%; 
+
+            text-shadow: 2px 2px 4px #424143;
+
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             justify-content: center;
+            }
+            .parallax-container2 {
+            /*  this is where the magic happens:  */
+            background-image: url("assets/IMG_5128-4.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-size: 100% 100%;
+            
+            text-shadow: 2px 2px 4px #424143;
+            color:#ff6600;
+            
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
         }
         @media screen and (max-width: 540px) {
             .ind-lg{
@@ -36,6 +75,45 @@
             }
             .row{
                 padding: 0,0,0,0;
+            }
+            .parallax-container {
+            /*  this is where the magic happens:  */
+            background-image: url("assets/bodega-recortada2.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: 100% 100%; 
+
+            text-shadow: 2px 2px 4px #424143;
+
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             justify-content: center;
+            }
+
+            .parallax-container2 {
+            /*  this is where the magic happens:  */
+            background-image: url("assets/IMG_5128-4.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-size: 100% 100%;
+            
+            text-shadow: 2px 2px 4px #424143;
+            color:#ff6600;
+            
+            /* dimensions are important, ensure it is tall enough to scroll */ 
+            min-height: 100vh;
+
+            /* you are free to lay out the container items with flexbox or whatever means you wish */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             }
         }
         
@@ -119,44 +197,6 @@
             transition: 5s all ease;
             font-family: 'PT Sans Narrow', sans-serif;
             font-family: 'Unbounded', cursive;
-        }
-        .parallax-container {
-            /*  this is where the magic happens:  */
-            background-image: url("assets/bodega-recortada2.png");
-            background-attachment: fixed;
-            background-position: center;
-            background-size: 100% 100%; 
-
-            text-shadow: 2px 2px 4px #424143;
-
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 100vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-             justify-content: center;
-        }
-        .parallax-container2 {
-            /*  this is where the magic happens:  */
-            background-image: url("assets/IMG_5128-4.png");
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
-            background-size: 100% 100%;
-            
-            text-shadow: 2px 2px 4px #424143;
-            color:#ff6600;
-            
-            /* dimensions are important, ensure it is tall enough to scroll */ 
-            min-height: 100vh;
-
-            /* you are free to lay out the container items with flexbox or whatever means you wish */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
         .bg-divided{
             width: 100%;
@@ -281,9 +321,15 @@
         </div>
     </nav>
     
-    <div class="container-fluid p-0"> 
+    <div class="container-fluid p-0 d-none d-md-block"> 
         <div class = "d-flex justify-content-center gy-0 ">
             <img class="img-fluid"  src="assets/header3.png"/>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0 d-block d-md-none"> 
+        <div class = "d-flex justify-content-center gy-0 ">
+            <img class="img-fluid"  src="assets/header-s.png"/>
         </div>
     </div>
       
@@ -555,8 +601,11 @@
                           maquinaria, mercancía HAZ-MAT, entre otras.<br>
                     </p>
                 </div>
-                <div class="col-12">
+                <div class="col-12 d-none d-md-block">
                     <img class="img-fluid pb-5" src="assets/collage.png" style=" margin-top: -17px; filter: drop-shadow(0 0 0.75rem black);">
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <img class="img-fluid pb-5" src="assets/collage-s.png" style=" margin-top: -17px; filter: drop-shadow(0 0 0.75rem black);">
                 </div>
                 <div class="col-12">
                     <p class="display-6 text-center text-white"> El personal de <b>GRUPO LERI</b> esta capacitado 
